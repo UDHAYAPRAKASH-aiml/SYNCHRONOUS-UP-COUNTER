@@ -25,22 +25,43 @@ Otherwise, the J and K inputs for that flip-flop will both be “low,” placing
 Since the first (LSB) flip-flop needs to toggle at every clock pulse, its J and K inputs are connected to Vcc or Vdd, where they will be “high” all the time.
 The next flip-flop need only “recognize” that the first flip-flop’s Q output is high to be made ready to toggle, so no AND gate is needed.
 However, the remaining flip-flops should be made ready to toggle only when all lower-order output bits are “high,” thus the need for AND gates.
-
+```
 **Procedure**
-
-/* write all the steps invloved */
-
+/* write all the steps invloved */:
+step 1: first go to qratus prime software
+step2: create folder and type the program
+step3:In the veriog you get RTL diagram
+step4:And the waveform diagram
+step 5:end the program 
+```
+```
 **PROGRAM**
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-Developed by: RegisterNumber:
+Developed by:udhaya prakash v
+RegisterNumber:24901131
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+   if(rst)
+     out<=0;
+   else 
+     out <= out+1;
+end
+endmodule
 */
+```
+**RTL LOGIC UP COUNTER**:
+![Screenshot (57)](https://github.com/user-attachments/assets/d368ef32-06be-42e5-8c04-9f2627a54fd5)
 
-**RTL LOGIC UP COUNTER**
 
-**TIMING DIAGRAM FOR IP COUNTER**
 
-**TRUTH TABLE**
+**TIMING DIAGRAM FOR IP COUNTER**:
+![Screenshot (58)](https://github.com/user-attachments/assets/e9b70097-29b7-4cc6-b9d6-60d073b46604)
 
-**RESULTS**
+
+**RESULTS**:
+Thus the up counter are verified.
